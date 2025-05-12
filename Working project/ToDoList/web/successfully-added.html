@@ -3,71 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign In</title>
+  <title>Successfully added task</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #f9f9f9;
+      color: #333;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    .signin-container {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 300px;
-    }
-
-    .signin-container h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .form-group button {
-      width: 100%;
-      padding: 0.7rem;
+    header {
       background: #4CAF50;
       color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      padding: 2rem 1rem;
+      text-align: center;
     }
 
-    .form-group button:hover {
-      background: #45a049;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .sucess-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .button-container {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    a.button {
+      text-decoration: none;
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+    }
+
+    a.button:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
-<div class="sucess-container">
-    <h2>
-        Your task  added successfully  !
-    </h2>
-    <p> Your task has been saved and added to your list of tasks .</p>
-    <p>Click <a href="index.html"> here</a> if you want to go and add more tasks or go and view all your tasks <a href="ViewAll">here</a> </p>
-
-</div>
-
+  <header>
+    <h1>TaskFlow</h1>
+    <p>Your simple and smart task management solution</p>
+  </header>
+  <div class="sucess-container">
+    <h2>Your task added successfully!</h2>
+    <p>Your task has been saved and added to your list of tasks.</p>
+    <div class="button-container">
+      <a href="index.html" class="button">Add More Tasks</a>
+      <a href="ViewAll" class="button">View All Tasks</a>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 TaskFlow. All rights reserved.
+  </footer>
 </body>
 </html>
