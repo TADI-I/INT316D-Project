@@ -92,11 +92,11 @@
                     tasks.get(i);
                 
             %>
-            <td>
-            <tr><%=tasks.get(i).getTitle()%></tr>
-            <tr><%=tasks.get(i).getDesc()%></tr>
-            <tr><%=tasks.get(i).getStatus()%></tr>
-            </td>
+            <tr>
+            <td><%=tasks.get(i).getTitle()%></td>
+            <td><%=tasks.get(i).getDesc()%></td>
+            <td><%=tasks.get(i).getStatus()%></td>
+            </tr>
             <% } %>
         </table>
    
