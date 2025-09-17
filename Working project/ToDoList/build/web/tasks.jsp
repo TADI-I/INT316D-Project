@@ -1,10 +1,18 @@
+<%-- 
+    Document   : tasks
+    Created on : 03 May 2025, 7:46:03 PM
+    Author     : Student
+--%>
+
+<%@page import="java.util.List"%>
+<%@page import="entities.Tasks"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TaskFlow - Task Management Made Simple</title>
-  <style>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>List Of Tasks</title>
+        <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -71,31 +79,26 @@
       font-size: 0.9rem;
     }
   </style>
-</head>
-<body>
-
-  <header>
-    <h1>TaskFlow</h1>
-    <p>Your simple and smart task management solution</p>
-    <div class="cta">
-      <a href="#signup">Get Started</a>
-    </div>
-  </header>
-
-  <section class="features">
-    <div class="feature">
-      <h3><a href="add-tasks.html">Create Tasks Easily</a></h3>
-      <p>Quickly add and organize tasks in just a few clicks.</p>
-    </div>
-    <div class="feature">
-      <h3>See Tasks</h3>
-      <p>Visualize task status with intuitive dashboards.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 TaskFlow. All rights reserved.
-  </footer>
-
-</body>
+    </head>
+    <body>
+        <%
+            List<Tasks> tasks = (List<Tasks>)request.getAttribute("tasks");
+        %>
+        
+        <table border = 2>
+            <th>Title</th><th>Description</th><th>Status</th>
+            <%
+                for(int i=0 ; i < tasks.size(); i ++){
+                    tasks.get(i);
+                
+            %>
+            <td>
+            <tr><%=tasks.get(i).getTitle()%></tr>
+            <tr><%=tasks.get(i).getDesc()%></tr>
+            <tr><%=tasks.get(i).getStatus()%></tr>
+            </td>
+            <% } %>
+        </table>
+   
+    </body>
 </html>
